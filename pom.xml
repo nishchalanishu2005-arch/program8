@@ -38,7 +38,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>com.devops.mavenci.mavenci.App</mainClass> <!-- 👈 Change to your actual main class -->
+              <mainClass>com.mvn.program8.App</mainClass> <!-- 👈 Change to your actual main class -->
             </manifest>
           </archive>
         </configuration>
