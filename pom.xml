@@ -2,18 +2,20 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mvn</groupId>
-  <artifactId>program8</artifactId>
+  <groupId>com.devops.mavenci</groupId>
+  <artifactId>mavenci</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>program8</name>
+  <name>mavenci</name>
   <url>http://maven.apache.org</url>
 
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.complier.source>11</maven.complier.source>
-    <maven.complier.target>11</maven.complier.target> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+
+     <!-- Java version for compiling -->
+    <maven.compiler.source>11</maven.compiler.source>  
+    <maven.compiler.target>11</maven.compiler.target>  
   </properties>
 
   <dependencies>
@@ -24,19 +26,23 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-   <build>
-	  <plugins>
-	  	<plugin>
-			  <groupId>org.apache.maven.plugins</groupId>
-			  <artifactId>maven-jar-plugin</artifactId>
-			  <version>3.3.0</version>
-			  <configuration>
-				  <archive>
-					  <manifest>
-						  <mainClass> com.mvn.program8.App</mainClass>
-					  </manifest>
-				  </archive>
-			  </configuration>
-		  </plugin>
-  </plugins></build>
+
+  <!-- Build section: defines how the project should be built -->
+  <build>
+    <plugins>
+      <!-- Plugin for creating executable JAR files -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>com.devops.mavenci.mavenci.App</mainClass> <!-- 👈 Change to your actual main class -->
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
